@@ -2,6 +2,7 @@ import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { useFonts as useLato, Lato_400Regular } from '@expo-google-fonts/lato';
 import { useFonts as useOswald, Oswald_400Regular } from '@expo-google-fonts/oswald';
 import React from 'react';
+import { API_KEY, AUTH_DOMAIN, PROJECT_ID, STORAGE, SENDER, API_ID} from '@env';
 import { ThemeProvider } from 'styled-components/native';
 import { theme } from './src/infrastructure/theme';
 import { initializeApp, getApps } from 'firebase/app';
@@ -9,12 +10,12 @@ import { AuthenticationContextProvider } from './src/services/authentication/aut
 import { Navigation } from './src/infrastructure/navigation';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAX9XD33EyQorZvsLIgmunw1yYuDJ10yk0",
-  authDomain: "mealstogo-4ff73.firebaseapp.com",
-  projectId: "mealstogo-4ff73",
-  storageBucket: "mealstogo-4ff73.appspot.com",
-  messagingSenderId: "806163901662",
-  appId: "1:806163901662:web:38bd02a44db7a041fd264f"
+  apiKey: API_KEY,
+  authDomain: AUTH_DOMAIN,
+  projectId: PROJECT_ID,
+  storageBucket: STORAGE,
+  messagingSenderId: SENDER,
+  appId: API_ID
 };
 
 if (!getApps().length) {
